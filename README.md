@@ -6,7 +6,13 @@ The **React Employee Management App** is a web application that enables authenti
 
 ## 📟 Live Demo
 
-🌍 **[Live Demo](https://your-deployment-link.com/)**
+🌍 **[Live Demo](https://employewise-mangement.netlify.app/)**
+
+### Credentials
+
+     - **Credentials**
+        -Email: eve.holt@reqres.in
+        -password : cityslicka
 
 ## ✨ Features
 
@@ -47,8 +53,8 @@ Ensure you have the following installed:
 1⃣ **Clone the repository:**
 
 ```bash
-git clone https://github.com/your-repo/user-management-app.git
-cd user-management-app
+git clone https://github.com/codesby-raviteja/EmployWise-Assignment
+cd EmployWise-Assignment
 ```
 
 2⃣ **Install dependencies:**
@@ -93,10 +99,10 @@ The project uses the following dependencies:
 
 ```
 
-## 🚀 Deployment  
+## 🚀 Deployment
 
-The app is **deployed on Netlify**. To deploy your version:  
+The app is **deployed on Netlify**. To deploy your version:
 
 1⃣ **Push your code to GitHub**  
 2⃣ **Connect your repository to Netlify**  
-3⃣ **Deploy with default settings**  
+3⃣ **Deploy with default settings**
