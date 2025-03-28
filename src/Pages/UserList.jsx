@@ -99,8 +99,12 @@ function UserList() {
           Log out
         </button>
       </div>
-      <div className="max-w-7xl w-full  min-h-[calc(100vh-160px)] gap-4 grid grid-cols-[repeat(auto-fit,minmax(120px,260px))]  justify-center items-center mx-auto ">
-        {filteredData.length == 0 ? (
+      <div className="max-w-7xl w-full  min-h-[calc(100vh-220px)] gap-4 grid grid-cols-[repeat(auto-fit,minmax(120px,260px))]  justify-center items-center mx-auto ">
+        {userList.length === 0 ? (
+          <p className="text-2xl font-medium text-white  ">
+            Loading the users...
+          </p>
+        ) : filteredData.length == 0 ? (
           <p className="font-medium text-2xl text-white"> No User found</p>
         ) : (
           filteredData.map((user) => <UserCard key={user?.id} {...user} />)
