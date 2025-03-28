@@ -7,7 +7,7 @@ import EditUser from "./Components/EditUser"
 
 function App() {
   return (
-    <main className="bg-gray-500 w-screen h-screen">
+    <main className="bg-black/50 w-screen h-">
       <BrowserRouter>
         <Routes>
           <Route path="/">
