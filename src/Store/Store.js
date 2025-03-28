@@ -1,4 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit"
+
 import userList from "./usersSlice"
 
 const store = configureStore({
@@ -6,6 +7,5 @@ const store = configureStore({
     userList: userList,
   },
 })
-
 
 export default store

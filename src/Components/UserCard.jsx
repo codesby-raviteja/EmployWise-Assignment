@@ -4,9 +4,20 @@ import { useDispatch } from "react-redux"
 import { Link, useNavigate } from "react-router"
 import { handleDeleteUser } from "../store/usersSlice"
 
+/**
+ * A React component that renders a user card with their avatar, name, and edit/delete functionality.
+ * It dispatches an action to delete the user when the delete button is clicked, and navigates to the edit user page when the edit button is clicked.
+ * @param {{ avatar: string, first_name: string, last_name: string, id: number, email: string }} props - The user details to be rendered
+ * @returns {ReactElement} The user card component
+ */
 function UserCard({ avatar, first_name, last_name, id, email }) {
   const dispatch = useDispatch()
   const navigate = useNavigate()
+  /**
+   * Deletes a user by dispatching an action to delete the user and navigating to the home page if the user is not authenticated.
+   * It also alerts the user if there is an error during deletion.
+   * since the user is not deleted in backend , removing the user on client-side so that the user can feel that the Object is deleted
+   */
   const deleteUser = async () => {
     if (!localStorage.getItem("token")) {
       navigate("/")
@@ -15,7 +26,7 @@ function UserCard({ avatar, first_name, last_name, id, email }) {
     try {
       const response = await axios.delete(`https://reqres.in/api/users/${id}`)
       dispatch(handleDeleteUser({ id }))
-      alert("successfully deleted")
+      alert("successfully deleted") // alerting user on successfull deletion
     } catch (err) {
       alert(err.message)
     }

@@ -1,5 +1,9 @@
-import { use } from "react"
 
+/**
+ * Validates the edited user data
+ * @param {Object} userDetails - The user data to be validated
+ * @returns {Object} An object with keys as the fields that contain errors and the value as the error message
+ */
 export const validateEditedData = (userDetails) => {
   const errorObj = {}
   if (!userDetails.first_name) {
@@ -13,6 +17,18 @@ export const validateEditedData = (userDetails) => {
   }
   return errorObj
 }
+
+
+
+
+/**
+ * Validates the login data by checking the email format and password presence.
+ * Returns an object containing error messages for each invalid field.
+ *
+
+ * @param {Object} userObj - The user object containing login details.
+ * @returns {Object} An object with error messages for invalid email or missing password.
+ */
 
 export const validateLoginData = (userObj) => {
   const errorObj = {}
