@@ -3,8 +3,8 @@ import { Link, useLocation, useParams } from "react-router"
 import { validateEditedData } from "../constant"
 import axios from "axios"
 import { useDispatch } from "react-redux"
-import { editUser } from "../store/usersSlice"
 import InputComponent from "../Components/InputComponent"
+import { editUser } from "../store/userSlice"
 
 /**
  * The EditUser component allows users to edit their details.
@@ -46,18 +46,18 @@ function EditUser() {
       setInputErrors((prev) => ({ ...prev, [name]: "" }))
     }
   }
-/**
- * Handles the form submission for editing user details.
- * It prevents the default form submission behavior, validates the input data,
- * and sets input errors if validation fails. If validation passes, it clears 
- * previous error messages and makes an API request to update the user data 
- * on the server. Upon a successful server response, it dispatches an action 
- * to update the user details in the Redux store, resets the form fields, 
- * and alerts the user of a successful update. If an error occurs during 
- * the API request, it sets the error message state.
- *
- * @param {Object} e - The event object from the form submission.
- */
+  /**
+   * Handles the form submission for editing user details.
+   * It prevents the default form submission behavior, validates the input data,
+   * and sets input errors if validation fails. If validation passes, it clears
+   * previous error messages and makes an API request to update the user data
+   * on the server. Upon a successful server response, it dispatches an action
+   * to update the user details in the Redux store, resets the form fields,
+   * and alerts the user of a successful update. If an error occurs during
+   * the API request, it sets the error message state.
+   *
+   * @param {Object} e - The event object from the form submission.
+   */
 
   const handleSubmit = async (e) => {
     e.preventDefault()

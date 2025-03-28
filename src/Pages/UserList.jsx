@@ -1,9 +1,9 @@
 import axios from "axios"
 import React, { useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
-import { addUsers } from "../store/usersSlice"
 import UserCard from "../Components/UserCard"
 import { useNavigate } from "react-router"
+import { addUsers } from "../store/userSlice"
 
 /**
  * The UserList component renders a list of users and a search bar. It

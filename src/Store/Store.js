@@ -1,11 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit"
 
-import userList from "./usersSlice"
+import userList from "./userSlice"
 
-const store = configureStore({
+const Store = configureStore({
   reducer: {
     userList: userList,
   },
 })
 
-export default store
+export default Store

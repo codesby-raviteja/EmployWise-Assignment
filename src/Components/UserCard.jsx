@@ -2,7 +2,7 @@ import axios from "axios"
 import React from "react"
 import { useDispatch } from "react-redux"
 import { Link, useNavigate } from "react-router"
-import { handleDeleteUser } from "../store/usersSlice"
+import { handleDeleteUser } from "../store/userSlice"
 
 /**
  * A React component that renders a user card with their avatar, name, and edit/delete functionality.
